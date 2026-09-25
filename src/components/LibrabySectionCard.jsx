@@ -2,9 +2,12 @@ import Image from "next/image";
 import React from "react";
 import ratingPng from "../../public/Star 1.png";
 import heartPng from "../../public/Heart.png";
+import Link from "next/link";
 
 const LibrabySectionCard = ({ data }) => {
   return (
+    <>
+    <Link href={`/excersice/${data.id}`}>
     <div className="bg-[#15171D] rounded-2xl overflow-hidden cursor-pointer">
       <div>
         <Image
@@ -48,6 +51,7 @@ const LibrabySectionCard = ({ data }) => {
               <Image
                 src={heartPng}
                 width={12}
+                alt="heart-png"
                 className="brightness-0 invert"
               />
             </span>
@@ -59,6 +63,7 @@ const LibrabySectionCard = ({ data }) => {
                 src={ratingPng}
                 width={12}
                 className="brightness-0 invert"
+                alt="rating-png"
               />
             </span>
             {data.rating}
@@ -66,6 +71,8 @@ const LibrabySectionCard = ({ data }) => {
         </div>
       </div>
     </div>
+    </Link>
+    </>
   );
 };
 
