@@ -23,14 +23,16 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-full flex flex-col">
-        
-        <Navbar/>
-        
+        <Navbar />
+
         {children}
-
-
-
       </body>
     </html>
   );
