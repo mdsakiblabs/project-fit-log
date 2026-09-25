@@ -10,7 +10,13 @@ const page = async ({ params }) => {
       <div className="wraper max-w-270 mx-auto flex justify-between items-start gap-20">
         {/* left side image  */}
         <div>
-          <Image src={data.image} width={500} height={500} alt="details-page-image" />
+          <Image 
+          src={data.image} 
+          width={500} 
+          height={500} 
+          alt="details-page-image"
+          
+          />
         </div>
         {/* right side texts  */}
         <div>

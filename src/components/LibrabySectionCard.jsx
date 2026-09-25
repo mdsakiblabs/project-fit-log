@@ -43,7 +43,7 @@ const LibrabySectionCard = ({ data }) => {
         ></div>
         <div className="flex gap-7 font-light text-[#9CA3AF] text-[14px] mb-7">
           <h2 className=" flex gap-2 justify-center items-center">
-            <i class="ri-time-line"></i>
+            <i className="ri-time-line"></i>
             {data.duration} min
           </h2>
           <h2 className="flex justify-center items-center gap-2">
