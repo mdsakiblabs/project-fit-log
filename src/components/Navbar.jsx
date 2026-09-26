@@ -2,6 +2,7 @@ import React from "react";
 import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import NavbarPlanAndSaveSection from "./NavbarPlanAndSaveSection";
 const Navbar = () => {
   return (
     <div className="w-full bg-[#0C0D10] border-b border-[#1C1F26]">
@@ -26,19 +27,9 @@ const Navbar = () => {
             <h2 className="text-[#9CA3AF] cursor-pointer">My Plan</h2>
             </Link>
         </div>
+        
         {/* plan and saved section  */}
-        <div className="flex gap-7 ">
-
-          <Link href={'/my-plan/todays-plan'}>
-            <h3 className="text-[#D1D5DB] cursor-pointer">Plan <span className="inline-flex w-6 h-6  items-center justify-center rounded-full bg-[#C2F800] text-black font-bold "> 0 </span>
-            </h3>
-            </Link>
-
-            <Link href={'/my-plan/saved'}>
-            <h3 className="text-[#9CA3AF] cursor-pointer">Saved <span className="inline-flex w-6 h-6  items-center justify-center rounded-full bg-[#2D313B] text-[#D1D5DB] font-bold "> 0 </span>
-            </h3>
-            </Link>
-        </div>
+        <NavbarPlanAndSaveSection/>
       </nav>
     </div>
   );
