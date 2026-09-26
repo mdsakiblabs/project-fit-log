@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import ratingPng from "../../../public/Star 1.png";
 import heartPng from "../../../public/Heart.png";
+import Link from "next/link";
 const TodaysPlanAndSavedTabCard = ({ data }) => {
   return (
     <section className="w-full bg-[#13161D] border border-[#272B35] py-3 px-5 rounded-2xl mb-4">
@@ -54,7 +55,9 @@ const TodaysPlanAndSavedTabCard = ({ data }) => {
 
         {/* right side  */}
         <div className="flex gap-5 items-center">
+          <Link href={`/excersice/${data.id}`}>
           <button className="py-2 px-4 rounded-full border border-[#374151] cursor-pointer">View Details</button>
+          </Link>
           <button className="py-2 px-4 rounded-full  bg-[#CCFF00] text-[#14171E] font-semibold cursor-pointer">
            <i className="ri-check-fill"></i> Mark as Done
             
