@@ -24,16 +24,30 @@ const ExerciseProvider = ({ children }) => {
   };
 
   const saveForLater = (exercise) => {
+    setSavedExercises((previousExercises) => {
+      const alreadyExists = previousExercises.some(
+        (item) => item.id === exercise.id,
+      );
+
+      if (alreadyExists) {
+        return previousExercises;
+      }
+
+      return [...previousExercises, exercise];
+    });
+  };
+
+  const removeFromTodayPlan = (exerciseId) => {
+    setTodayPlan((previousExercises) => {
+      return previousExercises.filter((item) => item.id !== exerciseId);
+    });
+  };
+
+  const removeFromSavedExercises = (exerciseId) => {
   setSavedExercises((previousExercises) => {
-    const alreadyExists = previousExercises.some(
-      (item) => item.id === exercise.id
+    return previousExercises.filter(
+      (item) => item.id !== exerciseId
     );
-
-    if (alreadyExists) {
-      return previousExercises;
-    }
-
-    return [...previousExercises, exercise];
   });
 };
 
@@ -46,6 +60,8 @@ const ExerciseProvider = ({ children }) => {
         saveForLater,
         activeTab,
         setActiveTab,
+        removeFromTodayPlan,
+        removeFromSavedExercises,
       }}
     >
       {children}

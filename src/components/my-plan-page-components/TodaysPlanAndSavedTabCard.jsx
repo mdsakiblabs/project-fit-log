@@ -3,6 +3,7 @@ import React from "react";
 import ratingPng from "../../../public/Star 1.png";
 import heartPng from "../../../public/Heart.png";
 import Link from "next/link";
+import RemoveBtnOfTodayPlanAndSavedPageCard from "./RemoveBtnOfTodayPlanAndSavedPageCard";
 const TodaysPlanAndSavedTabCard = ({ data }) => {
   return (
     <section className="w-full bg-[#13161D] border border-[#272B35] py-3 px-5 rounded-2xl mb-4">
@@ -62,7 +63,9 @@ const TodaysPlanAndSavedTabCard = ({ data }) => {
            <i className="ri-check-fill"></i> Mark as Done
             
             </button>
-          <i className="ri-close-large-line cursor-pointer hover:bg-[#374151] px-2 py-1 rounded-full"></i>
+           
+            {/* remove button  */}
+            <RemoveBtnOfTodayPlanAndSavedPageCard data={data}/>
         </div>
       </div>
     </section>
