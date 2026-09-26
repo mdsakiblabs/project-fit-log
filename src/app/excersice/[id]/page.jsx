@@ -5,7 +5,7 @@ import DetailsPageButtons from "@/components/DetailsPageButtons";
 
 const page = async ({ params }) => {
   const { id } = await params;
-  const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`);
+  const res = await fetch(`https://api.api-store.workers.dev/api/fitlog/${id}`);
   const data = await res.json();
   return (
     <section className="w-full">
