@@ -4,21 +4,15 @@ import Link from "next/link";
 import React from "react";
 import { useContext } from "react";
 import ExerciseContext from "@/context/ExerciseContext";
+import TodaysPlanAndSaveLinks from "./TodaysPlanAndSaveLinks";
 
 const TodaysPlanSavedAndSortbySec = () => {
   const { sortBy, setSortBy } = useContext(ExerciseContext);
 
   return (
+    // todays plan and save 
     <div className="w-full flex justify-between items-center my-5">
-      <div className="flex gap-5 bg-[#151921] py-2 px-5 rounded-2xl">
-        <Link href={"/my-plan/todays-plan"}>
-          <h2 className="text-xl font-semibold cursor-pointer">Todays Plan</h2>
-        </Link>
-
-        <Link href={"/my-plan/saved"}>
-          <h2 className="text-xl font-semibold cursor-pointer">Saved</h2>
-        </Link>
-      </div>
+      <TodaysPlanAndSaveLinks/>
 
       {/* sortby section */}
 

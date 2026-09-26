@@ -3,6 +3,7 @@ import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import NavbarPlanAndSaveSection from "./NavbarPlanAndSaveSection";
+import NavLinks from "./NavLinks";
 const Navbar = () => {
   return (
     <div className="w-full bg-[#0C0D10] border-b border-[#1C1F26]">
@@ -17,16 +18,7 @@ const Navbar = () => {
           <h2 className="text-2xl font-bold">FITLOG</h2>
         </div>
         {/* Workouts and my plan section */}
-        <div className="flex gap-7 text-base ">
-
-            <Link href={'/'}>
-            <h2 className="text-[#C2F800] bg-[#C2F800]/10 py-1 text-center px-4 rounded-3xl cursor-pointer ">Workouts</h2>
-            </Link>
-
-            <Link href={'/my-plan/todays-plan'}>
-            <h2 className="text-[#9CA3AF] cursor-pointer">My Plan</h2>
-            </Link>
-        </div>
+         <NavLinks/>
         
         {/* plan and saved section  */}
         <NavbarPlanAndSaveSection/>
