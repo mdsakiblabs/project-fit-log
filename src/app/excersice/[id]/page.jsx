@@ -1,5 +1,7 @@
 import Image from "next/image";
-import React from "react";
+import React,  { useContext } from "react";
+import ExerciseContext from "@/context/ExerciseContext";
+import DetailsPageButtons from "@/components/DetailsPageButtons";
 
 const page = async ({ params }) => {
   const { id } = await params;
@@ -116,10 +118,7 @@ const page = async ({ params }) => {
           </div>
 
             {/* buttons */}
-          <div className="flex gap-5 text-xl font-semibold mt-5">
-              <button className="bg-[#CCFF00] text-[#0F1115] px-4 py-2 rounded-2xl cursor-pointer">Add to today's plan</button>
-              <button className="bg-transparent border border-[#374151] text-[#E5E7EB] px-4 py-2 rounded-2xl cursor-pointer">Save for later</button>
-          </div>
+          <DetailsPageButtons data={data}/>
         </div>
       </div>
     </section>

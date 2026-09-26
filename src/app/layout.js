@@ -1,3 +1,5 @@
+import { ExerciseProvider } from "@/context/ExerciseContext";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -30,9 +32,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <Navbar />
-
-        {children}
+        <ExerciseProvider>
+          <Navbar />
+          {children}
+        </ExerciseProvider>
       </body>
     </html>
   );
