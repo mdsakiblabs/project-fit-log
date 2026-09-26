@@ -6,7 +6,7 @@ import NavbarPlanAndSaveSection from "./NavbarPlanAndSaveSection";
 import NavLinks from "./NavLinks";
 const Navbar = () => {
   return (
-    <div className="w-full bg-[#0C0D10] border-b border-[#1C1F26]">
+    <div className="w-full bg-[#0C0D10] border-b border-[#1C1F26] mb-15">
       <nav className="flex justify-between max-w-270 items-center mx-auto py-4">
         {/* logo section */}
         <div className="flex items-center justify-center  gap-2">

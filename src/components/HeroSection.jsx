@@ -4,7 +4,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <section className="w-full">
-      <div className="wraper max-w-270 mx-auto flex justify-between items-center bg-[#15171D] p-14 mt-10 rounded-2xl border border-[#222630]">
+      <div className="wraper max-w-270 mx-auto flex justify-between items-center bg-[#15171D] p-14 rounded-2xl border border-[#222630]">
         {/* left side texts and button section */}
         <div className="flex flex-col gap-10">
           <div className="texts flex flex-col gap-5">

@@ -8,7 +8,7 @@ const page = async ({ params }) => {
   const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${id}`);
   const data = await res.json();
   return (
-    <section className="w-full my-10">
+    <section className="w-full">
       <div className="wraper max-w-270 mx-auto flex justify-between items-start gap-20">
         {/* left side image  */}
         <div>

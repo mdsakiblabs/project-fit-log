@@ -5,7 +5,7 @@ import React from 'react'
 
 const layout = ({children}) => {
   return (
-    <section className='w-full mt-10'> 
+    <section className='w-full mt-[-20]'> 
         <div className='wraper max-w-270 mx-auto'>
            <HeadingAndSubHeading/>
            <ExcerciseMuniteAndCalSection/>
