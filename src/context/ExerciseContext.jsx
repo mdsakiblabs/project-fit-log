@@ -9,6 +9,8 @@ const ExerciseProvider = ({ children }) => {
   const [savedExercises, setSavedExercises] = useState([]);
   const [activeTab, setActiveTab] = useState("today");
 
+  const [sortBy, setSortBy] = useState("duration");
+
   const addToTodayPlan = (exercise) => {
     setTodayPlan((previousExercises) => {
       const alreadyExists = previousExercises.some(
@@ -44,12 +46,10 @@ const ExerciseProvider = ({ children }) => {
   };
 
   const removeFromSavedExercises = (exerciseId) => {
-  setSavedExercises((previousExercises) => {
-    return previousExercises.filter(
-      (item) => item.id !== exerciseId
-    );
-  });
-};
+    setSavedExercises((previousExercises) => {
+      return previousExercises.filter((item) => item.id !== exerciseId);
+    });
+  };
 
   return (
     <ExerciseContext.Provider
@@ -62,6 +62,8 @@ const ExerciseProvider = ({ children }) => {
         setActiveTab,
         removeFromTodayPlan,
         removeFromSavedExercises,
+        sortBy,
+        setSortBy,
       }}
     >
       {children}

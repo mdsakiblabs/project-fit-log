@@ -1,25 +1,30 @@
 "use client";
 
 import React, { useContext, useEffect } from "react";
+
 import ExerciseContext from "@/context/ExerciseContext";
+
 import TodaysPlanAndSavedTabCard from "@/components/my-plan-page-components/TodaysPlanAndSavedTabCard";
+
 import EmptyTodaysAndSavedCard from "@/components/my-plan-page-components/EmptyTodaysAndSavedCard";
 
 const page = () => {
-  const { savedExercises, setActiveTab } = useContext(ExerciseContext);
+  const { savedExercises, setActiveTab, sortBy } = useContext(ExerciseContext);
 
   useEffect(() => {
     setActiveTab("saved");
   }, [setActiveTab]);
 
-  console.log(savedExercises);
+  const sortedSavedExercises = [...savedExercises].sort((a, b) => {
+    return a[sortBy] - b[sortBy];
+  });
 
   return (
     <div className="w-full">
       {savedExercises.length === 0 ? (
         <EmptyTodaysAndSavedCard />
       ) : (
-        savedExercises.map((item, ind) => {
+        sortedSavedExercises.map((item, ind) => {
           return <TodaysPlanAndSavedTabCard key={ind} data={item} />;
         })
       )}
