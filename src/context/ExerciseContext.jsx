@@ -10,12 +10,32 @@ const ExerciseProvider = ({ children }) => {
   const [activeTab, setActiveTab] = useState("today");
 
   const addToTodayPlan = (exercise) => {
-    setTodayPlan((previousExercises) => [...previousExercises, exercise]);
+    setTodayPlan((previousExercises) => {
+      const alreadyExists = previousExercises.some(
+        (item) => item.id === exercise.id,
+      );
+
+      if (alreadyExists) {
+        return previousExercises;
+      }
+
+      return [...previousExercises, exercise];
+    });
   };
 
   const saveForLater = (exercise) => {
-    setSavedExercises((previousExercises) => [...previousExercises, exercise]);
-  };
+  setSavedExercises((previousExercises) => {
+    const alreadyExists = previousExercises.some(
+      (item) => item.id === exercise.id
+    );
+
+    if (alreadyExists) {
+      return previousExercises;
+    }
+
+    return [...previousExercises, exercise];
+  });
+};
 
   return (
     <ExerciseContext.Provider
@@ -25,7 +45,7 @@ const ExerciseProvider = ({ children }) => {
         addToTodayPlan,
         saveForLater,
         activeTab,
-        setActiveTab
+        setActiveTab,
       }}
     >
       {children}

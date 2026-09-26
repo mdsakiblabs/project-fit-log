@@ -1,5 +1,5 @@
 import { ExerciseProvider } from "@/context/ExerciseContext";
-
+import { Toaster } from "react-hot-toast";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -35,6 +35,7 @@ export default function RootLayout({ children }) {
         <ExerciseProvider>
           <Navbar />
           {children}
+          <Toaster/>
         </ExerciseProvider>
       </body>
     </html>
