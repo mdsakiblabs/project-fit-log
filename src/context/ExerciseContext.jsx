@@ -7,23 +7,15 @@ const ExerciseContext = createContext();
 const ExerciseProvider = ({ children }) => {
   const [todayPlan, setTodayPlan] = useState([]);
   const [savedExercises, setSavedExercises] = useState([]);
-
+  const [activeTab, setActiveTab] = useState("today");
 
   const addToTodayPlan = (exercise) => {
-  setTodayPlan((previousExercises) => [
-    ...previousExercises,
-    exercise,
-  ]);
-};
+    setTodayPlan((previousExercises) => [...previousExercises, exercise]);
+  };
 
-const saveForLater = (exercise) => {
-  setSavedExercises((previousExercises) => [
-    ...previousExercises,
-    exercise,
-  ]);
-};
-
-
+  const saveForLater = (exercise) => {
+    setSavedExercises((previousExercises) => [...previousExercises, exercise]);
+  };
 
   return (
     <ExerciseContext.Provider
@@ -31,7 +23,9 @@ const saveForLater = (exercise) => {
         todayPlan,
         savedExercises,
         addToTodayPlan,
-        saveForLater
+        saveForLater,
+        activeTab,
+        setActiveTab
       }}
     >
       {children}

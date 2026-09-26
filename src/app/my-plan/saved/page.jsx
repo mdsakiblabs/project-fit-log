@@ -1,12 +1,18 @@
 "use client";
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ExerciseContext from "@/context/ExerciseContext";
 import TodaysPlanAndSavedTabCard from "@/components/my-plan-page-components/TodaysPlanAndSavedTabCard";
 import EmptyTodaysAndSavedCard from "@/components/my-plan-page-components/EmptyTodaysAndSavedCard";
 
 const page = () => {
-  const { savedExercises } = useContext(ExerciseContext);
+  const { savedExercises, setActiveTab } = useContext(ExerciseContext);
+
+  useEffect(() => {
+    setActiveTab("saved");
+  }, [setActiveTab]);
+
+  console.log(savedExercises);
 
   return (
     <div className="w-full">

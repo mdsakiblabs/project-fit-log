@@ -56,7 +56,7 @@ const TodaysPlanAndSavedTabCard = ({ data }) => {
         <div className="flex gap-5 items-center">
           <button className="py-2 px-4 rounded-full border border-[#374151] cursor-pointer">View Details</button>
           <button className="py-2 px-4 rounded-full  bg-[#CCFF00] text-[#14171E] font-semibold cursor-pointer">
-           <i class="ri-check-fill"></i> Mark as Done
+           <i className="ri-check-fill"></i> Mark as Done
             
             </button>
           <i className="ri-close-large-line cursor-pointer hover:bg-[#374151] px-2 py-1 rounded-full"></i>
