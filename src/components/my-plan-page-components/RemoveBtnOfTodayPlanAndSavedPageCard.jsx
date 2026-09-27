@@ -16,7 +16,7 @@ const RemoveBtnOfTodayPlanAndSavedPageCard = ({ data }) => {
             removeFromSavedExercises(data.id);
           }
         }}
-        className="ri-close-large-line cursor-pointer hover:bg-[#374151] px-2 py-1 rounded-full"
+        className="ri-close-large-line cursor-pointer hover:bg-[#374151] p-1 rounded-full text-sm sm:text-base"
       ></i>
     </div>
   );

@@ -5,13 +5,13 @@ import React from 'react'
 
 const layout = ({children}) => {
   return (
-    <section className='w-full mt-[-20]'> 
-        <div className='wraper max-w-270 mx-auto'>
+    <section className='w-full  mt-[-20]'> 
+        <div className='wraper max-w-270 mx-auto px-5 desktop:px-0'>
            <HeadingAndSubHeading/>
            <ExcerciseMuniteAndCalSection/>
            <TodaysPlanSavedAndSortbySec/>
 
-           <div>
+           <div >
             {children}
            </div>
 

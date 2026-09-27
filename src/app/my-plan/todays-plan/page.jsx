@@ -20,7 +20,7 @@ const page = () => {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-10 desktop:mt-0">
       {todayPlan.length === 0 ? (
         <EmptyTodaysAndSavedCard />
       ) : (

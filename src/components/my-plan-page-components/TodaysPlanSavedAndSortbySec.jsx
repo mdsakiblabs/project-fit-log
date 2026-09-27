@@ -11,12 +11,12 @@ const TodaysPlanSavedAndSortbySec = () => {
 
   return (
     // todays plan and save 
-    <div className="w-full flex justify-between items-center my-5">
+    <div className="tablet:w-full inline-block tablet:flex justify-between items-center my-2 tablet:my-5">
       <TodaysPlanAndSaveLinks/>
 
       {/* sortby section */}
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-1 tablet:gap-3">
         <label htmlFor="sortBy" className="text-sm text-[#8A92A0]">
           Sort by:
         </label>
@@ -26,7 +26,7 @@ const TodaysPlanSavedAndSortbySec = () => {
           name="sortBy"
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
-          className="bg-[#15171D] text-white text-sm px-2  py-2.5 rounded-lg border border-[#292D36] outline-none cursor-pointer focus:border-[#8A92A0] transition"
+          className="bg-[#15171D] text-white text-sm px-2 py-1 tablet:py-2.5 rounded-lg border border-[#292D36] outline-none cursor-pointer focus:border-[#8A92A0] transition"
         >
           <option value="duration">Duration</option>
           <option value="caloriesBurned">Calories</option>

@@ -35,7 +35,9 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <ExerciseProvider>
           <Navbar />
+          <main className="flex-1 desktop:flex-none">
           {children}
+          </main>
           <Toaster/>
           <Footer/>
         </ExerciseProvider>
