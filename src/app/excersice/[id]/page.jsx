@@ -1,12 +1,15 @@
 import Image from "next/image";
-import React, { useContext } from "react";
-import ExerciseContext from "@/context/ExerciseContext";
+import { notFound } from "next/navigation";
+import React from "react";
 import DetailsPageButtons from "@/components/DetailsPageButtons";
 
 const page = async ({ params }) => {
   const { id } = await params;
   const res = await fetch(`https://api.api-store.workers.dev/api/fitlog/${id}`);
   const data = await res.json();
+  if (!data || !data.muscleGroups || !data.instructions) {
+    notFound();
+  }
   return (
     <section className="w-full desktop:px-0 px-5">
       <div className="wraper max-w-270 mx-auto desktop:flex justify-between items-start gap-5">
