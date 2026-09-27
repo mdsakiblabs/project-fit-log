@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FITLOG
 
-## Getting Started
+## Project Name
 
-First, run the development server:
+**FITLOG — Workout & Exercise Library**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Short Description
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+FITLOG is a responsive workout and exercise management web application built with Next.js. It provides a collection of exercises with detailed information such as targeted muscle groups, equipment, difficulty, duration, calories, and ratings.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Users can explore different exercises, view their details, add exercises to today's workout plan, and save exercises for later. The project also includes a simple dashboard where users can see their selected exercises along with total workout time and calories.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Next.js** — App Router and Server Components
+* **React.js** — Building reusable UI components
+* **JavaScript (JSX)** — Application logic
+* **Tailwind CSS** — Responsive and utility-first styling
+* **Context API** — Managing workout plan and saved exercises
+* **React Hot Toast** — Showing success and error notifications
+* **Remix Icon** — Icons used throughout the interface
+* **Next/Image** — Optimized image rendering
+* **REST API** — Fetching exercise data
+* **Git & GitHub** — Version control
+* **Vercel** — Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 5 Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 1. Exercise Library
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The library contains different exercises with useful information such as:
+
+* Exercise name
+* Muscle groups
+* Equipment
+* Duration
+* Calories burned
+* Rating
+
+The cards are responsive and include hover effects for a better user experience.
+
+### 2. Exercise Details
+
+Each exercise has its own dynamic details page.
+
+Users can view:
+
+* Exercise image
+* Description
+* Targeted muscle groups
+* Equipment
+* Difficulty
+* Sets and reps
+* Duration
+* Calories
+* Rating
+* Step-by-step instructions
+
+The details pages are handled using Next.js dynamic routes.
+
+### 3. Today's Workout Plan
+
+Users can add exercises to their **Today's Plan** directly from the exercise details page.
+
+The application also prevents the same exercise from being added multiple times.
+
+The My Plan section shows the total:
+
+* Number of exercises
+* Workout minutes
+* Calories burned
+
+### 4. Save Exercises for Later
+
+Users can save exercises that they want to do later.
+
+Saved exercises are displayed separately from today's workout plan, and duplicate exercises are prevented from being saved more than once.
+
+Users can also remove exercises from both lists whenever they want.
+
+### 5. Responsive UI & User-Friendly Experience
+
+FITLOG is designed to work across different screen sizes, including mobile, tablet, and desktop.
+
+The project also includes:
+
+* Responsive exercise cards
+* Loading skeleton while fetching data
+* Custom 404 page
+* Toast notifications
+* Smooth hover effects
+* Dark-themed fitness UI
+* Easy navigation between workouts, today's plan, and saved exercises
+
+---
+
+## Project Goal
+
+The main goal of this project was to build a practical exercise library while learning and applying Next.js concepts such as **App Router, dynamic routes, Server Components, Client Components, Context API, API fetching, loading UI, and responsive design**.
