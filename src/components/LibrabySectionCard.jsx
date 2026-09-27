@@ -8,7 +8,7 @@ const LibrabySectionCard = ({ data }) => {
   return (
     <>
     <Link href={`/excersice/${data.id}`}>
-    <div className="bg-[#15171D] rounded-2xl overflow-hidden cursor-pointer">
+    <div className="bg-[#15171D] rounded-2xl overflow-hidden cursor-pointer md:mb-0 mb-5 ">
       <div>
         <Image
           src={data.image}
@@ -25,7 +25,7 @@ const LibrabySectionCard = ({ data }) => {
             return (
               <h2
                 key={ind}
-                className="bg-[#C2F800] font-medium text-black px-3  rounded-2xl  flex justify-center items-center text-center"
+                className="bg-[#C2F800] font-medium text-black text-[12px] tablet:text-base px-3  rounded-2xl  flex justify-center items-center text-center"
               >
                 {item}
               </h2>
@@ -34,7 +34,7 @@ const LibrabySectionCard = ({ data }) => {
         </div>
 
         <h1 className="font-bold text-[20px] leading-8">{data.name}</h1>
-        <h3 className="text-[#9CA3AF] text-[14px] font-light">
+        <h3 className="text-[#9CA3AF] sm:text-[14px] target:text-[20px]font-light">
           {data.equipment}
         </h3>
         <div

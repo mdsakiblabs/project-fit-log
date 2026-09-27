@@ -9,7 +9,7 @@ const DetailsPageButtons = ({ data }) => {
     useContext(ExerciseContext);
 
   return (
-    <div className="flex gap-5 text-xl font-semibold mt-5">
+    <div className="flex gap-5 text-sm tablet:text-xl font-semibold mt-5">
       <button
         onClick={() => {
           const alreadyExists = todayPlan.some((item) => item.id === data.id);

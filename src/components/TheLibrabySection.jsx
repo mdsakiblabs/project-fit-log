@@ -8,7 +8,7 @@ const TheLibrabySection = async () => {
   const cardData = await res.json();
   
   return (
-    <section className="w-full mt-15">
+    <section className="w-full mt-10 md:mt-15 desktop:px-0 px-5">
       <div className="wraper max-w-270 mx-auto">
         <div className="texts">
           <h1 className="text-3xl font-bold leading-10 font-stretch-50% font-sans">
@@ -19,7 +19,7 @@ const TheLibrabySection = async () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-3 gap-6 mt-7">
+        <div className="tablet:grid tablet:grid-cols-2 desktop:grid-cols-3  gap-6 mt-7">
           {cardData.map((data, ind) => {
             return <LibrabySectionCard key={ind} data={data} />;
           })}

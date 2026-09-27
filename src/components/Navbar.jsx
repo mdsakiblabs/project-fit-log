@@ -9,12 +9,12 @@ import MobileNav from "./mobileUI/MobileNav";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-[#0C0D10] border-b border-[#1C1F26] mb-15">
-      <nav className="flex justify-between max-w-270 items-center mx-auto py-4 px-4 md:px-0">
+    <div className="w-full bg-[#0C0D10] border-b border-[#1C1F26] mb-10 md:mb-15 sticky top-0 z-999 tablet:static">
+      <nav className="flex justify-between max-w-270 items-center mx-auto py-4 px-5 desktop:px-0 ">
         {/* logo section */}
         <div className="flex items-center justify-center  gap-2">
           <Image src={logo} width={35} alt="navbar-logo" 
-          className="w-5 md:w-8.5 "
+          className="w-5 tablet:w-8.5 "
           />
           <h2 className=" text-[18px] md:text-2xl font-bold">FITLOG</h2>
         </div>

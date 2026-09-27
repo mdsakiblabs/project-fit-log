@@ -4,3 +4,9 @@ body{
   background-color: #000000;
   color:white
 }
+
+@theme {
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1200px;
+  --breakpoint-sm2: 430px;
+}
